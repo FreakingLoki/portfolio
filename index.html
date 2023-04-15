@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--stylesheet and fonts-->
     <link href="./resources/style.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Orbitron&family=Oxanium&display=swap" rel="stylesheet">
     <title>Jesse's Portfolio</title>
 </head>
 
 <body>
     <header>
         <section id="top-bar">
-            <h1>Jesse's Homepage</h1>
+            <h1>Jesse Heald</h1>
 
             <img src="./resources/images/icons/JHicon.png" id="head-logo" alt="JH logo">
         </section>
 
         <nav>
             <ul>
-                <li><button>About Me</button></li>
+                <li><button>About</button></li>
                 <li><button>Projects</button></li>
                 <li><button>Resume</button></li>
                 <li><button>Contact</button></li>
@@ -28,72 +32,102 @@
     </header>
 
     <main>
-        <section id="about-me">
-            <h2>About Me</h2>
+        <section id="slideshow-container">
 
-            <p id="part-one">
-                I'm an aspiring full stack web developer from central Maine. 
-                I spent some time enrolled at Norwich University studying Civil Engineering 
-                which turned out to be the wrong major for me. I left Norwich in 2014. When 
-                I left college I got a job at Performance Food Group as a night shift order 
-                selector. From there I worked my way up to the role of Driver Check-In 
-                Coordinator. This is an inventory control and quality control focued 
-                position which ensures fair reimbursment to customers and protects the 
-                company from unnecessary losses while keeping accurate inventory counts.
-                I was inspired to give programming and coding a try begining in 2022 when 
-                my wife decided to go back to school. I've always had interest in computer 
-                hardware and software. I've built and rebuilt PCs and laptops. When I was 
-                in middle school I tried learning Visual Basic, but I could not wrap my 
-                head around it back then. It didn't help that every time I sat down with 
-                the intent to learn I would get distracted by video games on my old PC.
+            <div class="slides">
+                <span class="slide-numbers">1 of 5</span>
+                
+                <article id="about">
+                    <h2>Jesse Heald</h2>
+                    <p>
+                        I am an aspiring Full Stack Web Developer from Central Maine.
+                    </p>
+                </article>
 
-            </p>
+                <span class="slide-captions">About</span>
+            </div>
 
-            <p id="part-two">
-                I have several hobbies, but I have trouble finding time to dedicate to 
-                them. Being a parent, homeowner, full time employee, and a student take 
-                up most of my free time. I still manage to find time to dedicate to playing 
-                video games, woodworking, and spending time outdoors with my family. I 
-                attempted to learn how to play guitar several years ago, and I learned 
-                some chords before deciding to stick to the drums. I've been playing 
-                the drums (only as a hobbiest, never in a group) for several years. 
-                I've been playing video games for my entire life, starting on the PC 
-                of course with games like Wolfenstein, Unreal Tournament, and Command 
-                and Conquer. As a new homeowner I decided to take up woodworking, 
-                hoping to learn some DIY skills and save some money on any repairs 
-                we may need. My first big woodworking project was a firewood storage 
-                structure. I think my next will be something smaller, maybe a piece of 
-                furniture.
-            </p>
+            <div class="slides">
+                <span class="slide-numbers">2 of 5</span>
 
-            <figure>
-                <img src="./resources/images/JessePhoto.png" id="personal-photo" alt="photograph of Jesse">
-                <figcaption>A photograph of me in my home office taken on a Google Pixel 6 Pro</figcaption>
-            </figure>
+                <article id="portfolio">
+                    <h2>Portfolio</h2>
+                    <p>
+                        This is the website you are currently visiting. Built with HTML, 
+                        CSS, and JS, I took my time with the design of this website and 
+                        I think it came out beautifully.
+                    </p>
+                </article>
+
+                <span class="slide-captions">Projects</span>
+            </div>
+
+            <div class="slides">
+                <span class="slide-numbers">3 of 5</span>
+
+                <article id="game">
+                    <h2>Text Game</h2>
+                    <p>
+                        A turn based text game built with HTML, CSS, and JS. An exercise in 
+                        DOM manipulation and Promises.
+                    </p>
+                </article>
+
+                <span class="slide-captions">Projects</span>
+            </div>
+
+            <div class="slides">
+                <span class="slide-numbers">4 of 5</span>
+
+                <article id="tom-krav">
+                    <h2>Tom McGraw's Krav Maga</h2>
+                    <p>
+                        This webpage was a learning experiance and is the first decently 
+                        designed webpage I created. It was built with HTML, CSS, and JS with 
+                        and emphasis on CSS Flexbox.
+                    </p>
+                </article>
+
+                <span class="slide-captions">Projects</span>
+            </div>
+
+            <div class="slides">
+                <span class="slide-numbers">5 of 5</span>
+
+                <article id="resume">
+                    <h2>Resume</h2>
+                    <p>
+                        Visit this page for a copy of my resume detailing my work experience, 
+                        knowledge, abilities, and skills.
+                    </p>
+                </article>
+
+                <span class="slide-captions">Resume</span>
+            </div>
             
         </section>
 
         <section id="contact">
-            <h2>Contact Information</h2>
+            <h2>Contact Me</h2>
 
-            <p id="email">Email: jesse@jesseheald.com</p>
-
-            <p id="phone">Phone: (207)660-2915</p>
+            <a href="mailto: jesse@jesseheald.com" target="_blank" alt="link to send email">
+                <img src="./resources/images/icons/OrangeEmail.png" id="email" alt="email icon">
+            </a>
 
             <a href="https://www.linkedin.com/in/jesseheald/" target="_blank" alt="link to linkedin profile">
-                <img src="./resources/images/icons/linkedin.png" id="linkedin" alt="linkedin icon">
+                <img src="./resources/images/icons/OrangeLinkedin.png" id="linkedin" alt="linkedin icon">
             </a>
 
             <a href="https://twitter.com/freakingloki" target="_blank" alt="link to twitter profile">
-                <img src="./resources/images/icons/twitter.png" id="twitter" alt="twitter icon">
+                <img src="./resources/images/icons/OrangeTwitter.png" id="twitter" alt="twitter icon">
             </a>
 
             <a href="https://github.com/FreakingLoki" target="_blank" alt="link to github profile">
-                <img src="./resources/images/icons/github.png" id="github" alt="github icon">
+                <img src="./resources/images/icons/OrangeGithub.png" id="github" alt="github icon">
             </a>
 
             <a href="https://www.instagram.com/jesseh317/" target="_blank" alt="link to instagram profile">
-                <img src="./resources/images/icons/instagram.png" id="instagram" alt="instagram icon">
+                <img src="./resources/images/icons/OrangeInstagram.png" id="instagram" alt="instagram icon">
             </a>
         </section>
     </main>
@@ -101,7 +135,7 @@
     <footer>
         <p>
             I started working on this website on April 10th 2023. If you find any issues please contact me and I'll 
-            start fixing them as soon as I can.
+            start fixing them as soon as I can. I'm still learning, so please be forgiving.
         </p>
     </footer>
 </body>
