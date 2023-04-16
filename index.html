@@ -10,28 +10,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Orbitron&family=Oxanium&display=swap" rel="stylesheet">
+    <!--javascript scripts-->
+    <script defer src="./slides.js"></script>
+    <script defer src="./imglinks.js"></script>
     <title>Jesse's Portfolio</title>
 </head>
 
 <body>
-    <header>
-        <section id="top-bar">
+    <header id="top-bar">
             <h1>Jesse Heald</h1>
 
             <img src="./resources/images/icons/JHicon.png" id="head-logo" alt="JH logo">
-        </section>
-
-        <nav>
-            <ul>
-                <li><button>About</button></li>
-                <li><button>Projects</button></li>
-                <li><button>Resume</button></li>
-                <li><button>Contact</button></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
+        <!-- slideshow display box -->
+        <!-- the JS ensures only one slide is shown at a time -->
         <section id="slideshow-container">
 
             <div class="slides">
@@ -104,30 +98,31 @@
 
                 <span class="slide-captions">Resume</span>
             </div>
-            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </section>
 
+        <!-- contact cards link out to social media and an email address -->
         <section id="contact">
-            <h2>Contact Me</h2>
 
-            <a href="mailto: jesse@jesseheald.com" target="_blank" alt="link to send email">
-                <img src="./resources/images/icons/OrangeEmail.png" id="email" alt="email icon">
+            <a href="mailto: jesse@jesseheald.com" target="_blank" class="ineractive-icon" alt="link to send email">
+                <img src="./resources/images/icons/email.png" id="email" alt="email icon">
             </a>
 
-            <a href="https://www.linkedin.com/in/jesseheald/" target="_blank" alt="link to linkedin profile">
-                <img src="./resources/images/icons/OrangeLinkedin.png" id="linkedin" alt="linkedin icon">
+            <a href="https://www.linkedin.com/in/jesseheald/" target="_blank" class="ineractive-icon" alt="link to linkedin profile">
+                <img src="./resources/images/icons/linkedin.png" id="linkedin" alt="linkedin icon">
             </a>
 
-            <a href="https://twitter.com/freakingloki" target="_blank" alt="link to twitter profile">
-                <img src="./resources/images/icons/OrangeTwitter.png" id="twitter" alt="twitter icon">
+            <a href="https://twitter.com/freakingloki" target="_blank" class="ineractive-icon" alt="link to twitter profile">
+                <img src="./resources/images/icons/twitter.png" id="twitter" alt="twitter icon">
             </a>
 
-            <a href="https://github.com/FreakingLoki" target="_blank" alt="link to github profile">
-                <img src="./resources/images/icons/OrangeGithub.png" id="github" alt="github icon">
+            <a href="https://github.com/FreakingLoki" target="_blank" class="ineractive-icon" alt="link to github profile">
+                <img src="./resources/images/icons/github.png" id="github" alt="github icon">
             </a>
 
-            <a href="https://www.instagram.com/jesseh317/" target="_blank" alt="link to instagram profile">
-                <img src="./resources/images/icons/OrangeInstagram.png" id="instagram" alt="instagram icon">
+            <a href="https://www.instagram.com/jesseh317/" target="_blank" class="ineractive-icon" alt="link to instagram profile">
+                <img src="./resources/images/icons/instagram.png" id="instagram" alt="instagram icon">
             </a>
         </section>
     </main>
@@ -139,4 +134,5 @@
         </p>
     </footer>
 </body>
+
 </html>
