@@ -1,15 +1,14 @@
 # Jesse's Portfolio Website
 *project work started April 10 2023*
----
 This project was one of the "capstone" projects from my courses on [Codecademy](https://www.codecademy.com/). It combines my knowledge of
 HTML5, CSS3, and JavaScript along with responsive design and accessibility features to make one of my best designed projects to date. It is not 
 100% complete yet, but it is close. See below for a list of work I still need to finish.
 
 ## To Do
 
-- [ ] Add an icon in the head to increase the attractiveness of the website
+- [x] Add an icon in the head to increase the attractiveness of the website
 - [ ] Increase comments for better code readability
-- [ ] Adjust styling of links on index.html to be more obviously clickable
+- [x] Adjust styling of links on index.html to be more obviously clickable
 - [ ] Add some height to the Skills and Attributes section of resume.html so that when dropdown cards are open they don't overflow the section
 
 - [ ] Add media queries for different screen sizes

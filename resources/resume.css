@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 p, a, figcaption, span, li{
     font-family: 'Exo 2', sans-serif;
     color: #5C89C0;
+    font-size: 16px;
 }
 
 a {
@@ -67,6 +68,31 @@ header {
 
 header h1 {
     color: #D24F1D;
+}
+
+header a {
+  padding: 0.5rem;
+
+  color:#D24F1D;
+  background-color: #0F0606;
+  border-bottom: 3px solid #D24F1D;
+  border-right: 3px solid #0F0606;
+
+  transition: background-color 0.2s, color 0.2s, border-bottom 0.2s, border-right 0.2s;
+}
+
+header a:hover {
+  color:#0F0606;
+  background-color: #D24F1D;
+  border-bottom: 3px solid #364863;
+  border-right: 3px solid #364863;
+}
+
+header a:active {
+  color:#D24F1D;
+  background-color: #364863;
+  border-bottom: 3px solid #D24F1D;
+  border-right: 3px solid #D24F1D;
 }
 
 /* main body styling */
@@ -124,7 +150,6 @@ section#work a:hover {
 section#skills {
     margin: 5rem auto 0 auto;
     padding: 1rem;
-    height: 40rem;
 
     display: flex;
     flex-direction: column;
@@ -175,13 +200,13 @@ button.collapsible {
 
     color: #D24F1D;
     background-color: #0F0606;
-
+    border-right: 2px solid #D24F1D;
   }
 
 .collapsible-card {
-    margin: 1.5rem;
+    margin: 1rem;
     padding: 0.5rem;
-    max-width: 10rem;
+    max-width: 15rem;
 }
 
 /* contact section */
