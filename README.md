@@ -10,6 +10,7 @@ HTML5, CSS3, and JavaScript along with responsive design and accessibility featu
 - [ ] Add an icon in the head to increase the attractiveness of the website
 - [ ] Increase comments for better code readability
 - [ ] Adjust styling of links on index.html to be more obviously clickable
+- [ ] Add some height to the Skills and Attributes section of resume.html so that when dropdown cards are open they don't overflow the section
 
 - [ ] Add media queries for different screen sizes
 - [ ] Add any missing accessibility features
