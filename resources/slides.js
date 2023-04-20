@@ -1,8 +1,6 @@
-
-
 // Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusSlides(n, animationClass) {
+  showSlides(slideIndex += n, animationClass);
 }
 
 // Thumbnail image controls
@@ -10,7 +8,7 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-function showSlides(n) {
+function showSlides(n, animationClass) {
   let i;
   let slides = document.getElementsByClassName("slides");
 
@@ -30,13 +28,20 @@ function showSlides(n) {
     slideIndex = slides.length;
   }
 
+  // Apply animation class to slide
+  if (animationClass) {
+    slides[slideIndex - 1].classList.add(animationClass);
+    setTimeout(() => {
+      slides[slideIndex - 1].classList.remove(animationClass);
+    }, 1000);
+  }
+
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  
+
   slides[slideIndex-1].style.display = "flex";
 }
-
 
 let slideIndex = 1;
 showSlides(slideIndex);
