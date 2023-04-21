@@ -1,13 +1,14 @@
-// Next/previous controls
+// slide change button control
 function plusSlides(n, animationClass) {
   showSlides(slideIndex += n, animationClass);
 }
 
-// Thumbnail image controls
+// shows the current slide (index n)
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+// change the slide using the proper animation depending on which button is clicked
 function showSlides(n, animationClass) {
   let i;
   let slides = document.getElementsByClassName("slides");
@@ -43,5 +44,6 @@ function showSlides(n, animationClass) {
   slides[slideIndex-1].style.display = "flex";
 }
 
+// set the starting conditions for the page
 let slideIndex = 1;
 showSlides(slideIndex);

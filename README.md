@@ -5,23 +5,26 @@ HTML5, CSS3, and JavaScript along with responsive design and accessibility featu
 100% complete yet, but it is close. See below for a list of work I still need to finish.
 
 ## To Do
-
-- [x] Add an icon in the head to increase the attractiveness of the website
+#### Readability
+- [x] Added an icon to the website to increase the attractiveness
 - [ ] Increase comments for better code readability
 - [x] Adjust styling of links on index.html to be more obviously clickable
-- [ ] Add some height to the Skills and Attributes section of resume.html so that when dropdown cards are open they don't overflow the section
+- [x] Added adaptive height to the Skills and Attributes section of resume.html so that when dropdown cards are open they don't overflow the section
 
+#### Responsiveness and Accessibility
 - [ ] Add media queries for different screen sizes
 - [ ] Add any missing accessibility features
 - [ ] Check contrast levels for colorblindness accessibility
 
-- [x] Add details to the dropdown cards in the skills section on resume.html
-- [x] Add details to the slideshow cards on index.html
+#### Site Content
+- [x] Added details to the dropdown cards in the skills section on resume.html
+- [x] Added details to the slideshow cards on index.html
 
 ## Possible Bonus Improvements
 
-- [ ] use JavaScript to add animation to slideshow cards on index.html when the next/prev buttons are clicked
+- [x] modified JavaScript and CSS to add a slide in/out effect to the slide transitions
 - [ ] use JavaScript to add animation to the dropdown cards when they are expanded on resume.html
 - [ ] maybe add some small animation the the main h1 header on index.html on hover
 - [ ] make the JH logo interactive and when clicked open a navigation menu to all of my projects
+- [ ] add an "about me" page detailing my hobbies etc.?
 - [ ] maybe add a "my favorite resources" slide with links to things like coolors.co and the css practice games

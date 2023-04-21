@@ -19,24 +19,60 @@ fonts sourced from fonts.google.com
 headers: Oxanium
 paragraphs: Exo 2
 buttons: Orbitron
+
+stylesheet:
+all sections of the stylesheets are labelled with "||section name"
+the new sections are preceeded with three blank lines
+every rule will be laid out similar to the below example:
+
+selector {
+  margins
+  padding
+
+  font styling (size, boldness, text-decoration, list-style)
+  
+  element sizing (height, width)
+
+  display (flex, grid etc)
+  display rules
+  position
+  overflow
+
+  color
+  background-color
+
+  border
+  border-radius
+
+transition
+animation
+
+any other rules
+}
 */
 
-/* universal styles and resets */
+
+
+/* ||universal styles and resets */
 
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oxanium', cursive;
-    color: #5C89C0;
+  font-family: 'Oxanium', cursive;
+
+  color: #5C89C0;
 }
 
 p, a, figcaption, span, li{
-    font-family: 'Exo 2', sans-serif;
-    color: #5C89C0;
-    font-size: 16px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 16px;
+
+  color: #5C89C0;
+
 }
 
 a {
@@ -44,30 +80,34 @@ a {
 }
 
 button {
-    font-family: 'Orbitron', sans-serif;
-    color: #5C89C0
+  font-family: 'Orbitron', sans-serif;
+
+  color: #5C89C0
 }
 
-/* header */
+
+
+/* ||header */
 
 header {
-    margin: 0 auto;
-    padding: 1.5rem;
+  margin: 0 auto;
+  padding: 1.5rem;
 
-    width: 80%;
+  width: 80%;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 
-    background-color: #0F0606;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+  background-color: #0F0606;
+
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 header h1 {
-    color: #D24F1D;
+  color: #D24F1D;
 }
 
 header a {
@@ -75,15 +115,21 @@ header a {
 
   color:#D24F1D;
   background-color: #0F0606;
+
   border-bottom: 3px solid #D24F1D;
   border-right: 3px solid #0F0606;
 
   transition: background-color 0.2s, color 0.2s, border-bottom 0.2s, border-right 0.2s;
 }
 
+/*
+add hover and active effects to the link to 
+clearly indicate interactivity
+*/
 header a:hover {
   color:#0F0606;
   background-color: #D24F1D;
+
   border-bottom: 3px solid #364863;
   border-right: 3px solid #364863;
 }
@@ -91,166 +137,210 @@ header a:hover {
 header a:active {
   color:#D24F1D;
   background-color: #364863;
+
   border-bottom: 3px solid #D24F1D;
   border-right: 3px solid #D24F1D;
 }
 
-/* main body styling */
+
+
+/* ||main body styling */
 
 body {
-    background-color: #270D06;
+  background-color: #270D06;
 }
 
 main {
-    margin: 0 auto;
-    width: 80%;
+  margin: 0 auto;
+  width: 80%;
 }
 
-/* work and skills section */
+
+
+/* ||work section */
 
 section#work {
-    margin: 5rem auto 0 auto;
-    padding: 1rem;
-    background-color: #232735;
-    border-radius: 1rem;
+  margin: 5rem auto 0 auto;
+  padding: 1rem;
+
+  background-color: #232735;
+
+  border-radius: 1rem;
 }
 
 section#work h2 {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 section#work h4 {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 section#work a {
-    padding: 1rem;
-    background-color: #232735;
-    padding: 0.5rem;
-    border-bottom: 3px solid #D24F1D;
-    border-right: 3px solid #232735;
-    transition: background-color 0.2s, color 0.2s, border-bottom 0.2s, border-right 0.2s;
-  }
+  padding: 0.5rem;
+
+  background-color: #232735;
+
+  border-bottom: 3px solid #D24F1D;
+  border-right: 3px solid #232735;
+
+  transition: background-color 0.2s, color 0.2s, border-bottom 0.2s, border-right 0.2s;
+}
 
   
 section#work a:hover {
-    color: #232735;
-    background-color: #D24F1D;
-    border-bottom: 3px solid #0F0606;
-    border-right: 3px solid #0F0606;
-  }
+  color: #232735;
+  background-color: #D24F1D;
 
-  section#work a:active {
-    color: #D24F1D;
-    background-color: #232735;
-    border-bottom: 3px solid #0F0606;
-    border-right: 3px solid #0F0606;
-  }
+  border-bottom: 3px solid #0F0606;
+  border-right: 3px solid #0F0606;
+}
+
+section#work a:active {
+  color: #D24F1D;
+  background-color: #232735;
+
+  border-bottom: 3px solid #0F0606;
+  border-right: 3px solid #0F0606;
+}
+
+
+
+/* ||skills and attributes section */
 
 section#skills {
-    margin: 5rem auto 0 auto;
-    padding: 1rem;
+  margin: 5rem auto 0 auto;
+  padding: 1rem;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 
-    background-color: #232735;
-    border-radius: 1rem;
+  background-color: #232735;
+
+  border-radius: 1rem;
 }
 
 
 #skills-div, #attributes-div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
+/*
+these are the buttons that the user can 
+click on to open more details about each 
+skill or attribute. they have hover and 
+active styles to ensure the user knows 
+they are interactive elements
+*/
 button.collapsible {
-    padding: 0.5rem;
-    width: 100%;
+  padding: 0.5rem;
 
-    cursor: pointer;
+  width: 100%;
 
-    background-color: #232735;
-    border-top: none;
-    border-left: none;
-    border-bottom: 2px solid #D24F1D;
-    border-right: 2px solid #232735;
+  background-color: #232735;
 
-    transition: background-color 0.2s, color 0.2s, border-bottom 0.2s, border-right 0.2s;
+  border-top: none;
+  border-left: none;
+  border-bottom: 2px solid #D24F1D;
+  border-right: 2px solid #232735;
+
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-bottom 0.2s, border-right 0.2s;
 }
 
 .active, .collapsible:hover {
-    color: #D24F1D;
-    background-color: #0F0606;
-    border-right: 2px solid #D24F1D;
-  }
+  color: #D24F1D;
+  background-color: #0F0606;
 
-/* Style the collapsible content. Note: hidden by default */
-.content {
-    font-size: 0.8rem;
-    padding: 0 1.2rem;
-
-    display: none;
-    overflow: hidden;
-
-    color: #D24F1D;
-    background-color: #0F0606;
-    border-right: 2px solid #D24F1D;
-  }
-
-.collapsible-card {
-    margin: 1rem;
-    padding: 0.5rem;
-    max-width: 15rem;
+  border-right: 2px solid #D24F1D;
 }
 
-/* contact section */
+/* 
+the content of the collapsible elements 
+that is hidden by default 
+*/
+
+.content {
+  padding: 0 1.2rem;
+
+  font-size: 0.8rem;
+
+  display: none;
+  overflow: hidden;
+
+  color: #D24F1D;
+  background-color: #0F0606;
+
+  border-right: 2px solid #D24F1D;
+}
+
+/*
+this is the styling for the container 
+that holds the cards and their titles
+*/
+
+.collapsible-card {
+  margin: 1rem;
+  padding: 0.5rem;
+
+  max-width: 15rem;
+}
+
+
+
+/* ||contact section */
 
 section#contact {
-    margin: 5rem auto 0 auto;
-    padding: 1rem;
+  margin: 5rem auto 0 auto;
+  padding: 1rem;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 
-    background-color: #0F0606;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-  }
+  background-color: #0F0606;
+
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
   
 #contact a {
-    padding: 0.5rem;
-    border-radius: 1rem;
-    transition: background-color 0.2s ease;
-  }
+  padding: 0.5rem;
+
+  border-radius: 1rem;
+
+  transition: background-color 0.2s ease;
+}
   
 a img {
-    transition: all 1s;
-  }
+  transition: all 1s;
+}
 
-/* footer section */
+/* ||footer section */
 
 footer {
-    margin: 0 auto;
-    padding: 1.5rem;
+  margin: 0 auto;
+  padding: 1.5rem;
 
-    width: 100%;
-    height: 15rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+  width: 100%;
+  height: 15rem;
 
-    background-color: #0F0606;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: #0F0606;
+
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 footer p {

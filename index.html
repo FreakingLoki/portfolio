@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!--stylesheet, fonts, and icon-->
+    <!--stylesheet and fonts-->
     <link href="./resources/style.css" type="text/css" rel="stylesheet">
-    <link href="./resources/images/icons/JHicon.png" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Orbitron&family=Oxanium&display=swap" rel="stylesheet">
@@ -17,7 +16,9 @@
     <script defer src="./resources/slides.js"></script>
     <script defer src="./resources/imglinks.js"></script>
 
+    <!-- page title and icon -->
     <title>Jesse's Portfolio - Full Stack Web Developer</title>
+    <link href="./resources/images/icons/JHicon.png" rel="icon">
 </head>
 
 <body>
@@ -27,10 +28,14 @@
     </header>
 
     <main>
-        <!-- slideshow display box -->
+        <!-- slideshow container box -->
         <!-- the JS ensures only one slide is shown at a time -->
         <section id="slideshow-container">
 
+            <!-- divs with the slides class are the whole slide -->
+            <!-- they each have a unique nubmer (1 of 5 etc.) -->
+            <!-- they each contain a title, the content, and a caption tag -->
+            <!-- the caption tags give the user an idea of what the slide content pertains to -->
             <div class="slides">
                 <span class="slide-numbers">1 of 5</span>
                 
@@ -127,11 +132,14 @@
                 <span class="slide-captions">Resume</span>
             </div>
 
+            <!-- these are the "next slide" and "previous slide" buttons-->
+            <!-- the onclick function activates the transition and animation -->
             <a class="prev" onclick="plusSlides(-1, 'slide-in-left')" alt="click for the previous slide">&#10094;</a>
             <a class="next" onclick="plusSlides(1, 'slide-in-right')" alt="click for the next slide">&#10095;</a>
         </section>
 
         <!-- contact cards link out to social media and an email address -->
+        <!-- the contact cards animate on hover to indicate interactivity -->
         <section id="contact">
 
             <a href="mailto: jesse@jesseheald.com" target="_blank" class="ineractive-icon" alt="link to send email to my public address">
@@ -156,6 +164,7 @@
         </section>
     </main>
 
+    <!-- the footer contains basic information about the website -->
     <footer>
         <p>
             I started working on this website on April 10th 2023. If you find any issues please contact me and I'll 

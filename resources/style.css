@@ -1,4 +1,5 @@
-/*
+/* ||colors, fonts, other style notes
+
 colors:
 palette sourced from www.coolors.co
 this is a blue, maroon, and orange color theme
@@ -19,23 +20,59 @@ fonts sourced from fonts.google.com
 headers: Oxanium
 paragraphs: Exo 2
 buttons: Orbitron
+
+stylesheet:
+all sections of the stylesheets are labelled with "||section name"
+the new sections are preceeded with three blank lines
+every rule will be laid out similar to the below example:
+
+selector {
+  margins
+  padding
+
+  font styling (size, boldness, text-decoration, list-style)
+  
+  element sizing (height, width)
+
+  display (flex, grid etc)
+  display rules
+  position
+  overflow
+
+  color
+  background-color
+
+  border
+  border-radius
+
+transition
+animation
+
+any other rules
+}
 */
 
-/* universal styles and resets */
+
+
+/* ||universal styles and resets */
 
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oxanium', cursive;
-    color: #D24F1D;
+  font-family: 'Oxanium', cursive;
+
+  color: #D24F1D;
 }
 
 p, a, figcaption, span, li {
-    font-family: 'Exo 2', sans-serif;
-    color: #D24F1D;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 16px;
+
+  color: #D24F1D;
 }
 
 a {
@@ -43,11 +80,14 @@ a {
 }
 
 button {
-    font-family: 'Orbitron', sans-serif;
-    color: #D24F1D;
+  font-family: 'Orbitron', sans-serif;
+
+  color: #D24F1D;
 }
 
-/* header */
+
+
+/* ||header */
 
 header {
     margin: 0 auto;
@@ -63,58 +103,83 @@ header {
     background-color: #0F0606;
 }
 
-/* body and main styling */
+/* ||body and main styling */
 
 body {
-    background-color: #0F0606;
+  background-color: #0F0606;
 }
 
 main { 
-    margin: 0 auto;
-    width: 80%;
+  margin: 0 auto;
+
+  width: 80%;
 }
 
-/* main content slideshow styling */
+/* ||main content slideshow styling */
 
 section#slideshow-container {
-    max-width: 100%;
-    height: 50rem;
-    padding: 2.5rem;
+  margin: auto;
+  padding: 2.5rem;
 
-    border: 2px solid #270D06;
-    border-radius: 20px;
-    position: relative;
-    margin: auto;
+  max-width: 100%;
+  height: 50rem;
 
-    overflow-x: hidden;
+  position: relative;
+  overflow-x: hidden;
+
+  border: 2px solid #270D06;
+  border-radius: 20px;
 }
 
-/* hide slides by default */
+/* 
+slides are hidden by default until
+the javascript onclick animates the slide and 
+brings it into the slideshow-container
+ */
+
 .slides {
-  display: none;
   height: 100%;
   width: 100%;
+
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
 
+div.slides article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+article h2, article a, article p {
+  margin: 0.5rem;
+}
+
+
+
+/* ||slide anamations */
+
 .slide-out-left {
-  animation: slide-out-left 0.5s forwards;
+  animation: slide-out-left 0.8s forwards;
 }
 
 .slide-out-right {
-  animation: slide-out-right 0.5s forwards;
+  animation: slide-out-right 0.8s forwards;
 }
 
 .slide-in-left {
   display: flex;
-  animation: slide-in-left 0.5s forwards;
+
+  animation: slide-in-left 0.8s forwards;
 }
 
 .slide-in-right {
   display: flex;
-  animation: slide-in-right 0.5s forwards;
+
+  animation: slide-in-right 0.8s forwards;
 }
 
 @keyframes slide-out-left {
@@ -157,129 +222,165 @@ section#slideshow-container {
   }
 }
 
-div.slides article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
 
-article h2, article a, article p {
-  margin: 0.5rem;
-}
 
-/* add hover effects for slides' anchor tags */
+/* ||slide content styling */
+
+/* 
+style the links within the slides including
+hover and active effects to clearly indicate interactivity
+*/
+
 article a {
-  background-color: #0F0606; /* Set initial background color */
   padding: 0.5rem;
-  /* border-radius: 1rem; */
+
+  background-color: #0F0606;
+
   border-bottom: 2px solid #D24F1D;
-  /* border-right: 2px solid #D24F1D; */
+
   transition: background-color 0.2s, color 0.2s, border-bottom 0.2s, border-right 0.2s;
 }
 
 article a:hover {
   color: #0F0606;
+  background-color: #D24F1D;
+
   border-bottom: 2px solid #6E2206;
   border-right: 2px solid #6E2206;
-  background-color: #D24F1D; /* Change background color on hover */
 }
 
 article a:active {
   color: #D24F1D;
   background-color: #0F0606;
+
   border-bottom: 2px solid #232735;
   border-right: 2px solid #232735;
 }
 
-/* adjust the size of the photos used in the slides */
+/* 
+adjust the sizing of the images and screenshots 
+within the slides so that they are attractive, but 
+not overly large
+*/
 img#jesse-photo {
-  height: 30rem;
   margin: 1.5rem;
   padding: 0.5rem;
+
+  height: 30rem;
+
   background-color: #6E2206;
-  border-radius: 20px;
+
   border: 2px solid #270D06;
+  border-radius: 20px;
 }
 
 img#portfolio-ss {
-  height: 32rem;
   margin: 1.5rem;
   padding: 0.5rem;
+
+  height: 32rem;
+
   background-color: #6E2206;
-  border-radius: 20px;
+
   border: 2px solid #270D06;
+  border-radius: 20px;
 }
 
 img#game-ss {
-  height: 32rem;
   margin: 1.5rem;
   padding: 0.5rem;
+
+  height: 32rem;
+
   background-color: #6E2206;
-  border-radius: 20px;
+
+
   border: 2px solid #270D06;
+  border-radius: 20px;
 }
 
 img#tom-krav-ss {
-  height: 32rem;
   margin: 1.5rem;
   padding: 0.5rem;
+
+  height: 32rem;
+
   background-color: #6E2206;
-  border-radius: 20px;
+
   border: 2px solid #270D06;
+  border-radius: 20px;
 }
 
-/* Next & previous buttons */
+
+
+/* ||slide change buttons */
 .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 1.5rem;
-    color: #D24F1D;
-    font-weight: bold;
-    font-size: 2rem;
-    transition: 0.6s ease;
-    user-select: none;
+  margin-top: -22px;
+  padding: 1.5rem;
+
+  width: auto;
+
+  font-weight: bold;
+  font-size: 2rem;
+
+  position: absolute;
+  top: 50%;
+
+  color: #D24F1D;
+
+  transition: 0.6s ease;
+
+  user-select: none;
+  cursor: pointer;
   }
 
   .prev {
     left: 0;
+
     border-radius: 0 3px 3px 0;
   }
   
-  /* Position the "next button" to the right */
   .next {
     right: 0;
+
     border-radius: 3px 0 0 3px;
   }
   
-  /* On hover, add a different background color */
+  /*
+  on hover, add a different background color
+  to clearly indicate interactivity
+  */
   .prev:hover, .next:hover {
+    color:#0F0606;
     background-color: #232735;
-    color:#0F0606
   }
   
-  /* Caption text */
+
+
+  /* ||slide captions and numbering */
   .slide-captions {
-    color: #D24F1D;
+    width: 100%;
+
     position: absolute;
     bottom: 0.5rem;
-    width: 100%;
     text-align: center;
-  }
-  
-  /* slide numbering text */
-  .slide-numbers {
+
     color: #D24F1D;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    top: 0.5rem;
   }
   
-  /* Fading animation */
+  .slide-numbers {
+    width: 100%;
+
+    position: absolute;
+    top: 0.5rem;
+    text-align: center;
+
+    color: #D24F1D;
+  }
+  
+
+
+  /* ||slide change buttons animation */
   .fade {
     animation-name: fade;
     animation-duration: 1s;
@@ -290,10 +391,13 @@ img#tom-krav-ss {
     to {opacity: 1}
   }
 
-/* contact cards section styling */
+
+
+/* ||contact cards section styling */
 
 section#contact {
   margin: 5rem auto 5rem auto;
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -302,7 +406,9 @@ section#contact {
 
 #contact a {
   padding: 0.5rem;
+
   border-radius: 1rem;
+
   transition: background-color 0.5s ease;
 }
 
@@ -310,22 +416,24 @@ a img {
   transition: all 1.5s;
 }
 
-/* foooter styling */
+/* ||foooter styling */
 
 footer {
-    margin: 0 auto;
-    padding: 1.5rem;
+  margin: 0 auto;
+  padding: 1.5rem;
 
-    width: 100%;
-    height: 15rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+  width: 100%;
+  height: 15rem;
 
-    background-color: #6E2206;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: #6E2206;
+
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 footer p {

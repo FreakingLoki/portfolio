@@ -4,25 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--stylesheet and fonts-->
     <link href="./resources/resume.css" type="text/css" rel="stylesheet">
-    <link href="./resources/images/icons/JHicon.png" rel="icon">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Orbitron&family=Oxanium&display=swap" rel="stylesheet">
+
     <!--javascript scripts-->
     <script defer src="./resources/imglinks.js"></script>
     <script defer src="./resources/skillcards.js"></script>
+
+    <!-- page title and icon-->
     <title>Jesse's Portfolio</title>
+    <link href="./resources/images/icons/JHicon.png" rel="icon">
 </head>
+
 <body>
     <header id="top-bar">
-        <h1>Jesse's Resume</h1>
+        <h1>Jesse's Portfolio - Resume</h1>
         <a href="https://jesseheald.com/" target="_blank" alt="link to jesse's portfolio website">Return to Homepage</a>
         <img src="./resources/images/icons/JHicon.png" id="head-logo" alt="JH logo">
     </header>
 
     <main>
+        <!-- the work section describes my previous professional employment -->
+        <!-- it includes a link to the website of the company -->
+        <!-- it tells the user how long I worked there -->
+        <!-- this section lists out my major responsibilities at that job -->
+        <!-- lastly this section includes a little bit more details about that job -->
+        <!-- just to give the user more information if they are interested -->
         <section id="work">
             <h2><a href="https://www.performancefoodservice.com/Our-Locations/NorthCenter" target="_blank" alt="link to the PFG contact webpage for the Augusta location">Performance Foodservice Northcenter</a></h2>
             <h5>Augusta, Maine</h5>
@@ -77,12 +89,17 @@
             </p>
         </section>
 
+        <!-- the skills section contains cards that detail my professional skills -->
+        <!-- each "collapsible-card" only shows the title of the skill until -->
+        <!-- the <button> is clicked, then the full description will be shown -->
+        <!-- to the user so that they can read more details if they wish -->
+        <!-- there is an attributes section taht includes descriptors of me -->
+        <!-- these are provided to give users an idea of who I am in the workplace -->
+        <!-- beyond just a list of abilities -->
         <section id="skills">
 
             <h2>Skills</h2>
-            <!-- each "collapsible-card" only shows the title of the skill until -->
-            <!-- the <button> is clicked, then the full description will be shown -->
-            <!-- to the user so that they can read more details if they wish -->
+
             <div id="skills-div">
                     <div class="collapsible-card">
                         <button class="collapsible">HTML5</button>
@@ -343,12 +360,28 @@
                     </div>
                 </div>
 
+                <div class="collapsible-card">
+                    <button class="collapsible">Craftsman Personality</button>
+                    <div class="content">
+                        <p>
+                            As part of my professinal development I took a workplace personality test. That 
+                            test said my personality type was that of a craftsman. I prefer to keep my head 
+                            down and work at a task, one task at a time, until the task is complete. I have great 
+                            attention to detail and workmanship as well as a deep respect for any rules I may 
+                            need to enforce or follow. I don't like "gray areas" where there is not a clear 
+                            right or wrong way to get something done. I think this is why I developed an interest 
+                            in both woodworking (as a hobby) and programming. I take great pride in a job well done.
+                        </p>
+                    </div>
+                </div>
+
             </div>
 
 
         </section>
         
         <!-- contact cards link out to social media and an email address -->
+        <!-- the contact cards animate on hover to indicate interactivity -->
         <section id="contact">
 
             <a href="mailto: jesse@jesseheald.com" target="_blank" class="ineractive-icon" alt="link to send me an email">
@@ -372,7 +405,8 @@
             </a>
         </section>
     </main>
-
+    
+    <!-- the footer contains basic information about the website -->
     <footer>
         <p>
             I started working on this website on April 10th 2023. If you find any issues please contact me and I'll 
