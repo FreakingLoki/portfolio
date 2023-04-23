@@ -14,7 +14,8 @@ HTML5, CSS3, and JavaScript along with responsive design and accessibility featu
 
 #### Responsiveness and Accessibility
 - [ ] Add media queries for different screen sizes
-- [ ] Add any missing accessibility features
+- [x] Added missing accessibility labels
+- [ ] Add keyboard controls to all major interactive elements
 - [ ] Check contrast levels for colorblindness accessibility
 
 #### Site Content
