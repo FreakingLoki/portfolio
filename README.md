@@ -16,7 +16,6 @@ HTML5, CSS3, and JavaScript along with responsive design and accessibility featu
 - [ ] Add media queries for different screen sizes
 - [x] Added missing accessibility labels
 - [ ] Add keyboard controls to all major interactive elements
-- [ ] Check contrast levels for colorblindness accessibility
 
 #### Site Content
 - [x] Added details to the dropdown cards in the skills section on resume.html
@@ -25,7 +24,7 @@ HTML5, CSS3, and JavaScript along with responsive design and accessibility featu
 ## Possible Bonus Improvements
 
 - [x] modified JavaScript and CSS to add a slide in/out effect to the slide transitions
-- [ ] use JavaScript to add animation to the dropdown cards when they are expanded on resume.html
+- [x] added animation effects to the dropdown cards on resume.html by modifying their max-height property with JavaScript
 - [ ] maybe add some small animation the the main h1 header on index.html on hover
 - [ ] make the JH logo interactive and when clicked open a navigation menu to all of my projects
 - [ ] add an "about me" page detailing my hobbies etc.?

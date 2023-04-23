@@ -226,7 +226,7 @@ section#skills {
 #skills-div, #attributes-div {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -263,21 +263,28 @@ button.collapsible {
 
 /* 
 the content of the collapsible elements 
-that is hidden by default 
+that is hidden by default with the 
+max-height: 0 rule so that before the button 
+is clicked, the content within the card is hidden
+the javascript executes on button press to adjust 
+max-height to fit the content
 */
 
 .content {
-  padding: 0 1.2rem;
+  padding: 0;
 
   font-size: 0.8rem;
 
-  display: none;
+  max-height: 0;
+
   overflow: hidden;
 
   color: #D24F1D;
   background-color: #0F0606;
 
   border-right: 2px solid #D24F1D;
+
+  transition: max-height 0.3s ease-out;
 }
 
 /*
@@ -290,6 +297,7 @@ that holds the cards and their titles
   padding: 0.5rem;
 
   max-width: 15rem;
+
 }
 
 

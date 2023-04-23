@@ -1,17 +1,15 @@
-// get cards by classname
 const coll = document.getElementsByClassName("collapsible");
 let i;
 
-// add event listeners to each card title
-// then on click change the display from none to block
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
+    const content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
     } else {
-      content.style.display = "block";
+      content.style.padding = 1.25 + "rem";
+      content.style.maxHeight = content.scrollHeight + "px";
     }
   });
 }
