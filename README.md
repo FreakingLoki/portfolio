@@ -13,7 +13,7 @@ HTML5, CSS3, and JavaScript along with responsive design and accessibility featu
 - [x] Added rules to stylesheets and refactored code to match new rules
 
 #### Responsiveness and Accessibility
-- [ ] Add media queries for different screen sizes
+- [x] Added media queries for responsiveness to different screen sizes
 - [x] Added missing accessibility labels
 - [ ] Add keyboard controls to all major interactive elements
 
@@ -27,6 +27,4 @@ HTML5, CSS3, and JavaScript along with responsive design and accessibility featu
 - [x] added animation effects to the dropdown cards on resume.html by modifying their max-height property with JavaScript
 - [ ] maybe add some small animation the the main h1 header on index.html on hover
 - [ ] make the JH logo interactive and when clicked open a navigation menu to all of my projects
-- [ ] add an "about me" page detailing my hobbies etc.?
-- [ ] maybe add a "my favorite resources" slide with links to things like coolors.co and the css practice games
 - [ ] add a downloadable PDF version of my resume? not sure if this is possible with GitHub Pages, further research is required first
