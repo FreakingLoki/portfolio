@@ -45,10 +45,10 @@ selector {
   border
   border-radius
 
-transition
-animation
+  transition
+  animation
 
-any other rules
+  any other rules
 }
 */
 
@@ -521,12 +521,40 @@ footer {
   align-items: center;
   justify-content: space-evenly;
 
-  background-color: #6E2206;
+  background-color: #9E3006;
 
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
 
 footer p {
+  padding: 0.3rem;
+
   color: #0F0606;
+
+  font-weight: bold;
+  line-height: 2;
+}
+
+footer a {
+  padding: 0.25rem;
+
+  font-weight: bold;
+  line-height: 2;
+
+  color: #0F0606;
+  background-color: #9E3006;
+
+  border-bottom: 2px solid #0F0606;
+  border-right: 2px solid #9E3006;
+
+  transition: color 0.2s, background-color 0.2s, border-bottom 0.2s, border-right 0.2s;
+}
+
+footer a:hover {
+  color:#9E3006;
+  background-color: #0F0606;
+
+  border-bottom: 2px solid #364863;
+  border-right: 2px solid  #364863;
 }

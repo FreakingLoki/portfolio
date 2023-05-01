@@ -448,5 +448,33 @@ footer {
 }
 
 footer p {
+  padding: 0.3rem;
+
   color: #D24F1D;
+
+  font-weight: 300;
+  line-height: 2;
+}
+
+footer a {
+  padding: 0.25rem;
+
+  font-weight: 300;
+  line-height: 2;
+
+  color: #D24F1D;
+  background-color: #0F0606;
+
+  border-bottom: 2px solid #D24F1D;
+  border-right: 3px solid #0F0606;
+
+  transition: color 0.2s, background-color 0.2s, border-bottom 0.2s, border-right 0.2s;
+}
+
+footer a:hover {
+  color:#0F0606;
+  background-color: #D24F1D;
+
+  border-bottom: 2px solid #364863;
+  border-right: 2px solid  #364863;
 }
