@@ -12,12 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Orbitron&family=Oxanium&display=swap" rel="stylesheet">
 
-    <!--javascript scripts-->
-    <script defer src="./resources/slides.js"></script>
-    <script defer src="./resources/imglinks.js"></script>
-
     <!-- page title and icon -->
-    <title>Jesse's Portfolio - Full Stack Web Developer</title>
+    <title>Jesse's Portfolio - Computer Science Professional</title>
     <link href="./resources/images/icons/JHicon.png" rel="icon">
 </head>
 
@@ -28,142 +24,38 @@
     </header>
 
     <main>
-        <!-- slideshow container box -->
-        <!-- the JS ensures only one slide is shown at a time -->
-        <section id="slideshow-container">
-
-            <!-- divs with the slides class are the whole slide -->
-            <!-- they each have a unique nubmer (1 of 5 etc.) -->
-            <!-- they each contain a title, the content, and a caption tag -->
-            <!-- the caption tags give the user an idea of what the slide content pertains to -->
-            <div class="slides">
-                <span class="slide-numbers">1 of 5</span>
-                
-                <article id="about">
-                    <h2>Jesse Heald</h2>
-                    <img src="./resources/images/JessePhoto.png" id="jesse-photo" alt="photo of jesse wearing orange sweatshirt in his blue home office">
-                    <a href="#contact" alt="link to the contact section" aria-label="link to jesse's contact information section further down the page">Jesse's Contact Information</a>
-                    <p>
-                        I am an aspiring Full Stack Web Developer from Central Maine. I am still in 
-                        the process of learning using several web resources. I'm always looking to 
-                        connect with people interested in this field, so please reach out! Look 
-                        below for my contact information or click the link above.
-                    </p>
-                </article>
-
-                <span class="slide-captions">About</span>
+    <section id="about" class="content-section">
+        <div class="profile-header">
+            <img src="./resources/images/JessePhoto.png" id="jesse-photo" alt="Jesse Heald">
+            <div class="profile-text">
+                <h2>Jesse Heald</h2>
+                <p>Computer Science student and Data Analyst based in Central Maine. Focused on building efficient software solutions and deriving insights from complex data.</p>
+                <a href="#contact" class="btn-primary">Get in Touch</a>
             </div>
+        </div>
+    </section>
 
-            <div class="slides">
-                <span class="slide-numbers">2 of 5</span>
+    <section id="projects" class="content-section">
+        <h2 class="section-title">Technical Projects</h2>
+        
+        <div class="project-grid">
+            <article class="project-card">
+                <h3>Task Dashboard</h3>
+                <div class="project-tags"><span>Flutter</span><span>Dart</span><span>Firebase</span></div>
+                <p>A cross-platform productivity tool focused on state management and intuitive UI.</p>
+                <a href="#" class="project-link">View Project</a>
+            </article>
 
-                <article id="portfolio">
-                    <h2>Personal Portfolio</h2>
-                    <img src="resources/images/PortfolioSS.png" id="portfolio-ss" alt="screenshot of the maroon and orange portfolio website homepage">
-                    <a href="https://jesseheald.com/" target="_blank" alt="link to jesse's portfolio website" aria-label="link to jesse's portfolio website">Jesse's Portfolio Website</a>
-                    <p>
-                        This is the website you are currently visiting. Built with HTML, 
-                        CSS, and JS, I took my time with the design of this website and 
-                        I think it came out beautifully. I worked pretty hard getting the 
-                        color scheme to be beautiful and high contrast enough so that anyone 
-                        can read it.
-                    </p>
-                </article>
-
-                <span class="slide-captions">Projects</span>
-            </div>
-
-            <div class="slides">
-                <span class="slide-numbers">3 of 5</span>
-
-                <article id="game">
-                    <h2>Text Game</h2>
-                    <img src="./resources/images/TextGameSS.png" id="game-ss" alt="screenshot of the brown and earthtone text rpg with characters ready to battle">
-                    <a href="https://freakingloki.github.io/Loki-s-Lil-RPG/" target="_blank" alt="link to the text rpg" aria-label="link to loki's lil rpg website">Loki's Lil RPG</a>
-                    <p>
-                        A turn based text game built with HTML, CSS, and JS. This project 
-                        was a challenging exercise in DOM manipulation and Promises and is 
-                        by far the largest project I have built so far. It is several 
-                        thousand lines of code. It took me about two months to build. I 
-                        had to take it slow (only a few hours a week) because I was still 
-                        very new to JavaScript when I started this project. This one project 
-                        taught me a lot though, so I'm very glad that I went beyond the 
-                        scope of the project that I was assigned. I also learned a thing 
-                        or two about scope creep!
-                    </p>
-                </article>
-
-                <span class="slide-captions">Projects</span>
-            </div>
-
-            <div class="slides">
-                <span class="slide-numbers">4 of 5</span>
-
-                <article id="tom-krav">
-                    <h2>Tom McGraw's Krav Maga</h2>
-                    <img src="./resources/images/TomsKravSS.png" id="tom-krav-ss" alt="screenshot of yellow blue and black themed tom mcgraw webpage">
-                    <a href="https://freakingloki.github.io/Tom-McGraw-s-Krav-Maga/" target="_blank" alt="link to tom's website" aria-label="link to otm mcgraw's krav maga website">Tom McGraw's Krav Maga & Mediterranean Grill</a>
-                    <p>
-                        This webpage was a learning experiance and is the first decently 
-                        designed webpage I created. It was built with HTML, and CSS with 
-                        and emphasis on CSS Flexbox. This was the "capstone" project for 
-                        my early CSS courses.
-                    </p>
-                </article>
-
-                <span class="slide-captions">Projects</span>
-            </div>
-
-            <div class="slides">
-                <span class="slide-numbers">5 of 5</span>
-
-                <article id="resume">
-                    <h2>Resume</h2>
-                    <a href="./resume.html" target="_blank" alt="link to a webpage version of my resume" aria-label="link to jesse's webpage resume">Jesse's Resume</a>
-                    <p>
-                        Visit this page for a copy of my resume detailing my work experience, 
-                        knowledge, abilities, and skills. This page was built as a part of my 
-                        portfolio website in order to have my previous work experience, 
-                        my previous projects, and my contact information all in one attractive, 
-                        easy to find place. 
-                    </p>
-                </article>
-
-                <span class="slide-captions">Resume</span>
-            </div>
-
-            <!-- these are the "next slide" and "previous slide" buttons-->
-            <!-- the onclick function activates the transition and animation -->
-            <a class="prev" onclick="plusSlides(-1, 'slide-in-left')" alt="click for the previous slide" role="button" aria-label="show the previous slide in the slideshow">&#10094;</a>
-            <a class="next" onclick="plusSlides(1, 'slide-in-right')" alt="click for the next slide" role="button" aria-label="show the next slide in the slideshow">&#10095;</a>
-        </section>
-
-        <!-- contact cards link out to social media and an email address -->
-        <!-- the contact cards animate on hover to indicate interactivity -->
-        <section id="contact">
-
-            <a href="mailto: jesse@jesseheald.com" target="_blank" class="interactive-icon" alt="link to send me an email" aria-label="link to send me an email">
-                <img src="./resources/images/icons/email.png" id="email" alt="orange email icon">
-            </a>
-
-            <a href="https://www.linkedin.com/in/jesseheald/" target="_blank" class="interactive-icon" alt="link to my linkedin profile" aria-label="link to my linkedin profile page">
-                <img src="./resources/images/icons/linkedin.png" id="linkedin" alt="orange linkedin icon">
-            </a>
-
-            <a href="https://twitter.com/freakingloki" target="_blank" class="interactive-icon" alt="link to my twitter profile" aria-label="link to my twitter profile page">
-                <img src="./resources/images/icons/twitter.png" id="twitter" alt="orange twitter icon">
-            </a>
-
-            <a href="https://github.com/FreakingLoki" target="_blank" class="interactive-icon" alt="link to my github profile" aria-label="link to my github profile page">
-                <img src="./resources/images/icons/github.png" id="github" alt="orange github icon">
-            </a>
-
-            <a href="https://www.instagram.com/jesseh317/" target="_blank" class="interactive-icon" alt="link to my instagram profile" aria-label="link to my instagram profile page">
-                <img src="./resources/images/icons/instagram.png" id="instagram" alt="orange instagram icon">
-            </a>
             
-        </section>
-    </main>
+            <article class="project-card">
+                <h3>Logistics Automation Tool</h3>
+                <div class="project-tags"><span>Python</span><span>Pandas</span><span>Excel API</span></div>
+                <p>Developed a custom automation script to generate material quotes and manage inventory simulations. Reduced manual data entry time and improved pricing accuracy for building product logistics.</p>
+                <a href="https://github.com/FreakingLoki" target="_blank" class="project-link">View Repo</a>
+            </article>
+        </div>
+    </section>
+</main>
 
     <!-- the footer contains basic information about the website -->
     <footer>

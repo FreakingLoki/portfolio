@@ -1,28 +1,5 @@
 /* ||colors, fonts, other style notes
 
-colors:
-palette sourced from www.coolors.co
-this is a blue, maroon, and orange color theme
-
-#5C89C0 pale blue
-#557AAA sky blue
-#7692FF blue
-#364863 blue gray
-#232735 dark blue gray
-#0F0606 dark maroon
-#270D06 maroon
-#6E2206 dark burnt orange
-#9E3006 burnt orange
-#CD3D06 orange
-#D24F1D pale orange
-#FF7E7A washed out orange
-
-fonts:
-fonts sourced from fonts.google.com
-headers: Oxanium
-paragraphs: Exo 2
-buttons: Orbitron
-
 stylesheet:
 all sections of the stylesheets are labelled with "||section name"
 the new sections are preceeded with three blank lines
@@ -55,6 +32,20 @@ selector {
 */
 
 
+:root {
+  /* new palette */
+  --bg-dark: #0f172a;       /* Deep Slate Blue */
+  --bg-card: #1e293b;       /* Lighter Slate */
+  --accent: #38bdf8;        /* Electric Blue */
+  --text-main: #f1f5f9;     /* Off-white */
+  --text-muted: #94a3b8;    /* Muted Blue-Gray */
+  --border: #334155;
+  
+  /* fonts sourced from fonts.google.com */
+  --font-header: 'Oxanium', cursive;
+  --font-body: 'Exo 2', sans-serif;
+  --font-button: 'Orbitron', sans-serif;
+}
 
 /* ||universal styles and resets */
 
@@ -64,17 +55,22 @@ selector {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oxanium', cursive;
+body {
+  width: 100%;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6; /* adds breathing room to text */
+}
 
-  color: #D24F1D;
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 p, a, figcaption, span, li {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 16px;
-
-  color: #D24F1D;
+ color: var(--text-muted);
+  font-weight: 300; /* Thinner weights look more modern */
 }
 
 a {
@@ -82,9 +78,12 @@ a {
 }
 
 button {
-  font-family: 'Orbitron', sans-serif;
-
-  color: #D24F1D;
+    font-family: var(--font-button);
+    color: var(--accent); /* Use the variable! */
+    background: transparent;
+    border: 1px solid var(--accent);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
 
@@ -94,23 +93,21 @@ button {
 header {
     margin: 0 auto;
     padding: 1.5rem;
-
     width: 80%;
-
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-    background-color: #0F0606;
+    background-color: var(--bg-dark);
 }
 
 /* ||body and main styling */
 
 body {
-  width: 100%;
-
-  background-color: #0F0606;
+    width: 100%;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
 }
 
 main { 
@@ -132,149 +129,95 @@ main {
   }
 }
 
-/* ||main content slideshow styling */
-
-section#slideshow-container {
-  margin: auto;
-  padding: 2.5rem;
-
-  max-width: 100%;
-  height: 50rem;
-
-  position: relative;
-  overflow-x: hidden;
-
-  border: 2px solid #270D06;
-  border-radius: 20px;
-}
-
-@media only screen and (max-width: 500px) {
-  section#slideshow-container {
-    padding: 4rem;
-
-    height: 60rem;
-  }
-  
-}
-
-
-
-/* 
-slides are hidden by default until
-the javascript onclick animates the slide and 
-brings it into the slideshow-container
- */
-
-.slides {
-  height: 100%;
-  width: 100%;
-
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-div.slides article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
 article h2, article a, article p {
   margin: 0.5rem;
 }
 
+/* || New Layout Rules */
 
-
-/* ||slide anamations */
-
-.slide-out-left {
-  animation: slide-out-left 0.8s forwards;
+.content-section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border);
 }
 
-.slide-out-right {
-  animation: slide-out-right 0.8s forwards;
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.slide-in-left {
-  display: flex;
-
-  animation: slide-in-left 0.8s forwards;
+/* About Section Flexbox */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap; /* Good for mobile! */
 }
 
-.slide-in-right {
-  display: flex;
-
-  animation: slide-in-right 0.8s forwards;
+.profile-text {
+    flex: 1;
+    min-width: 300px;
 }
 
-@keyframes slide-out-left {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-50%);
-  }
+/* Project Grid - The Modern Way */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-@keyframes slide-out-right {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(50%);
-  }
+.project-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-@keyframes slide-in-left {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
 }
 
-@keyframes slide-in-right {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
+.project-tags {
+    margin: 1rem 0;
 }
 
+.project-tags span {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    background: var(--bg-dark);
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    color: var(--accent);
+}
 
+/* Primary Button Style */
+.btn-primary {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--accent);
+    color: var(--bg-dark) !important;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: opacity 0.3s;
+}
 
-/* ||slide content styling */
-
-/* 
-style the links within the slides including
-hover and active effects to clearly indicate interactivity
-*/
+.btn-primary:hover {
+    opacity: 0.9;
+}
 
 article a {
-  padding: 0.5rem;
-
-  background-color: #0F0606;
-
-  border-bottom: 2px solid #D24F1D;
-
-  transition: background-color 0.2s, color 0.2s, border-bottom 0.2s, border-right 0.2s;
+    padding: 0.2rem 0; /* Simpler underline style */
+    color: var(--accent);
+    background-color: transparent;
+    border-bottom: 1px solid var(--accent);
+    transition: all 0.3s ease;
 }
 
 article a:hover {
-  color: #0F0606;
-  background-color: #D24F1D;
-
-  border-bottom: 2px solid #6E2206;
-  border-right: 2px solid #6E2206;
+    color: var(--text-main);
+    border-bottom-color: var(--text-main);
 }
 
 article a:active {
@@ -290,186 +233,16 @@ adjust the sizing of the images and screenshots
 within the slides so that they are attractive, but 
 not overly large
 */
-img#jesse-photo {
-  margin: 1.5rem;
-  padding: 0.5rem;
-
-  height: 30rem;
-
-  background-color: #6E2206;
-
-  border: 2px solid #270D06;
-  border-radius: 20px;
+img#jesse-photo, img#portfolio-ss, img#game-ss, img#tom-krav-ss {
+  background-color: transparent; /* Remove the orange background */
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
 
-img#portfolio-ss {
-  margin: 1.5rem;
-  padding: 0.5rem;
-
-  height: 32rem;
-
-  background-color: #6E2206;
-
-  border: 2px solid #270D06;
-  border-radius: 20px;
+img#jesse-photo:hover {
+  transform: scale(1.02); /* Very subtle interactive pop */
 }
-
-img#game-ss {
-  margin: 1.5rem;
-  padding: 0.5rem;
-
-  height: 32rem;
-
-  background-color: #6E2206;
-
-
-  border: 2px solid #270D06;
-  border-radius: 20px;
-}
-
-img#tom-krav-ss {
-  margin: 1.5rem;
-  padding: 0.5rem;
-
-  height: 32rem;
-
-  background-color: #6E2206;
-
-  border: 2px solid #270D06;
-  border-radius: 20px;
-}
-
-@media only screen and (max-width: 1200px) {
-  img#portfolio-ss, img#game-ss, img#tom-krav-ss {
-    margin: 1.25rem;
-  
-    height: 20rem;
-  }
-  
-}
-
-@media only screen and (max-width: 800px) {
-  img#jesse-photo, img#portfolio-ss, img#game-ss, img#tom-krav-ss {
-    margin: 1rem;
-  
-    height: 17.5rem;
-  }
-  
-}
-
-@media only screen and (max-width: 700px) {
-  img#portfolio-ss, img#game-ss, img#tom-krav-ss {
-    margin: 1rem;
-  
-    height: 15rem;
-  }
-  
-}
-
-@media only screen and (max-width: 600px) {
-  img#portfolio-ss, img#game-ss, img#tom-krav-ss {
-    margin: 1rem;
-  
-    height: 12.5rem;
-  }
-  
-}
-
-@media only screen and (max-width: 500px) {
-  img#jesse-photo, img#portfolio-ss, img#game-ss, img#tom-krav-ss {
-    margin: 1rem;
-  
-    height: 10rem;
-  }
-  
-}
-
-
-/* ||slide change buttons */
-.prev, .next {
-  margin-top: -22px;
-  padding: 1.5rem;
-
-  width: auto;
-
-  font-weight: bold;
-  font-size: 2rem;
-
-  position: absolute;
-  top: 50%;
-
-  color: #D24F1D;
-
-  transition: 0.6s ease;
-
-  user-select: none;
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 500px) {
-  .prev, .next {
-    top: 15%;
-  }
-  
-}
-
-.prev {
-  left: 0;
-
-  border-radius: 0 3px 3px 0;
-}
-  
-.next {
-  right: 0;
-
-  border-radius: 3px 0 0 3px;
-}
-  
-  /*
-  on hover, add a different background color
-  to clearly indicate interactivity
-  */
-.prev:hover, .next:hover {
-  color:#0F0606;
-  background-color: #232735;
-}
-  
-
-
-  /* ||slide captions and numbering */
-.slide-captions {
-  width: 100%;
-
-  position: absolute;
-  bottom: 0.5rem;
-  text-align: center;
-
-  color: #D24F1D;
-}
-  
-.slide-numbers {
-  width: 100%;
-
-  position: absolute;
-  top: 0.5rem;
-  text-align: center;
-
-  color: #D24F1D;
-}
-  
-
-
-  /* ||slide change buttons animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1s;
-}
-  
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
 
 
 /* ||contact cards section styling */
@@ -512,51 +285,27 @@ a img {
 /* ||foooter styling */
 
 footer {
-  margin: 0 auto;
-  padding: 1.5rem;
-
-  width: 100%;
-  height: 15rem;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-
-  background-color: #9E3006;
-
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  background-color: #020617; /* Even darker than the body */
+  border-top: 1px solid var(--border);
+  height: auto; /* Let it breathe based on content */
+  padding: 4rem 1.5rem;
 }
 
 footer p {
-  padding: 0.3rem;
-
-  color: #0F0606;
-
-  font-weight: bold;
-  line-height: 2;
+  color: var(--text-muted);
+  font-weight: normal;
 }
 
 footer a {
-  padding: 0.25rem;
-
-  font-weight: bold;
-  line-height: 2;
-
-  color: #0F0606;
-  background-color: #9E3006;
-
-  border-bottom: 2px solid #0F0606;
-  border-right: 2px solid #9E3006;
-
-  transition: color 0.2s, background-color 0.2s, border-bottom 0.2s, border-right 0.2s;
+    padding: 0.25rem;
+    font-weight: bold;
+    color: var(--accent);
+    background-color: transparent;
+    border-bottom: 2px solid var(--accent);
+    transition: color 0.2s, border-bottom 0.2s;
 }
 
 footer a:hover {
-  color:#9E3006;
-  background-color: #0F0606;
-
-  border-bottom: 2px solid #364863;
-  border-right: 2px solid  #364863;
+    color: var(--text-main);
+    border-bottom: 2px solid var(--text-main);
 }
