@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Orbitron&family=Oxanium&display=swap" rel="stylesheet">
 
     <!--javascript scripts-->
-    <script defer src="./resources/imglinks.js"></script>
     <script defer src="./resources/skillcards.js"></script>
 
     <!-- page title and icon-->
@@ -24,7 +23,7 @@
 <body>
     <header id="top-bar">
         <h1>Jesse Heald</h1>
-        <a href="https://jesseheald.com/" target="_blank" alt="link to jesse's portfolio website"aria-label="link to return to jesse's portfolio homepage">Return to Homepage</a>
+        <a href="index.html" class="btn-primary">Return to Homepage</a>
         <img src="./resources/images/icons/JHicon.png" id="head-logo" alt="JH logo">
     </header>
 
@@ -35,63 +34,31 @@
         <!-- this section lists out my major responsibilities at that job -->
         <!-- lastly this section includes a little bit more details about that job -->
         <!-- just to give the user more information if they are interested -->
-        <section id="work">
-            <h2>
-                <a href="https://www.performancefoodservice.com/Our-Locations/NorthCenter" target="_blank" alt="link to the PFG contact webpage for the Augusta location" aria-label="link to the contact webpage for performance food group's auguta location">
-                    Performance Foodservice Northcenter
-                </a>
-            </h2>
-            <h5>Augusta, Maine</h5>
-            <h5>from February 2014 to present</h5>
-            <br>
-            <h4>Major Responsibilities</h4>
-            <ul>
-                <li>Unload returned product from tractor trailers daily at a fast pace.</li>
-                <li>Ensure the emptied truck is ready for loading for the next delivery by organizing load bars, straps, temperature bulkheads, and pallets.</li>
-                <li>Check in returned product for quality issues including proper temperature, damage, or spoilage.</li>
-                <li>Check and record whether or not items match what was order using item numbers and descriptions.</li>
-                <li>Check that the reason for return matches what the driver, account manager, or customer reported.</li>
-                <li>Ensure the product will be returned to the correct location within the warehouse.</li>
-                <li>Coordinate with other inventory control personnel regarding recalls, hidden quality issues, or count discrepancies.</li>
-                <li>Perform inventory counts and adjustments.</li>
-                <li>Assist the Credits Coordinator by approving or denying credit to customers' accounts.</li>
-                <li>Enter credits into the computer system to approve or deny credit.</li>
-                <li>Watch for opportunities to reduce shrink.</li>
-                <li>Work in a safe and respectful manner in a busy area of the warehouse with limited space and time.</li>
-                <li>Maintain a clean and safe work area.</li>
-            </ul>
+        <section id="work" class="content-section">
+    <h2 class="section-title">Professional Experience</h2>
 
-            <br>
+    <article class="work-entry">
+        <h3>Warehouse Specialist</h3>
+        <h4>Cameron Ashley Building Products | Fairfield, ME</h4>
+        <span class="date">July 2024 – Present</span>
+        <ul>
+            <li>Operate heavy machinery (forklifts) to manage high-volume building material logistics.</li>
+            <li>Developed a **Python-based automation script** to generate material quotes, significantly reducing manual data entry.</li>
+            <li>Implement inventory management simulations to optimize warehouse flow and product placement.</li>
+        </ul>
+    </article>
 
-            <h4>Details</h4>
-            <p>
-                I began my professional career here after leaving college in 2014. I 
-                started on the night shift as an Order Selector. Accuracy was the most 
-                important aspect of this work, but other challenges included working 
-                extremely long hours and working at a very fast pace for the entirety of 
-                those long shifts. Luckily my background in long distance running taught 
-                me a lot about setting a fast pace.
-            </p>
-
-            <br>
-
-            <p>
-                In the fall of 2016 I interveiwed for a new position within the company 
-                where I would be able to get away from being a nocturnal being. I took a pay 
-                cut, but I was willing to make that trade. The job title I was offered (and 
-                still have) was Driver Check-In Coordinator. This job has changed a lot since 
-                I took it over. In the begining I was only responsible for checking returned 
-                product for quality and ensuring the item we were restocking in our inventory 
-                database matched the actual item being returned. However in 2019 there were 
-                many changes made for the sake of Covid-19 safety. One of those meant I had 
-                to limit contact with truck drivers. I'm now responsible for offloading the 
-                products and empty pallets from the drivers' trailers when they return to the 
-                warehosue at the end of their run each day. I'm back to working at a very fast pace 
-                while ensuring I stay accurate with my quality and product checks. I have training 
-                in HAACP procedures as well as some familiarity with DOT regulations and more 
-                knowledge about food safety than my wife cares to hear about.
-            </p>
-        </section>
+    <article class="work-entry">
+        <h3>Driver Check-In Coordinator</h3>
+        <h4>Performance Foodservice | Augusta, ME</h4>
+        <span class="date">February 2014 – July 2024</span>
+        <ul>
+            <li>Coordinated daily returns and inventory adjustments for a fast-paced food distribution center.</li>
+            <li>Ensured 100% accuracy in quality control, tracking product temperatures and spoilage for thousands of SKUs.</li>
+            <li>Managed warehouse shrink reduction through precise data entry and inventory audits.</li>
+        </ul>
+    </article>
+</section>
 
         <!-- the skills section contains cards that detail my professional skills -->
         <!-- each "collapsible-card" only shows the title of the skill until -->
@@ -106,167 +73,42 @@
 
             <div id="skills-div">
                     <div class="collapsible-card">
-                        <button class="collapsible" aria-label="expand html5 card for more details">HTML5</button>
+                        <button class="collapsible" aria-label="expand Python/Data card for more details">Python and Data</button>
                         <div class="content">
                             <p>
-                                I have been working with HTML5 since 2022, but I've 
-                                had exposure to it since the late 2000s. I tried my 
-                                hand at learning some code when I was in high school, 
-                                but I had a lot on my mind and a lot on my plate and 
-                                not much focus back then. Since I "reset" and drilled 
-                                down into what I want to do I've built several webpages.
-                                My GitHub account (as of April 2023) has six 
-                                repositories on it, but not all of them are well 
-                                built enough to be public. I would prefer to only 
-                                present my best work. I have taken and passed the 
-                                Codecademy HTML assessment exam
+                                Focused on automation and data analysis using Pandas and SciPy. Experienced in building scripts
+                                 that solve real-world logistics challenges.
                             </p>
                         </div>
                     </div>
 
                     <div class="collapsible-card">
-                        <button class="collapsible" aria-label="expand css3 card for more details">CSS3</button>
+                        <button class="collapsible" aria-label="expand Flutter/Dart card for more details">Flutter/Dart</button>
                         <div class="content">
                             <p>
-                                I have been working with CSS3 for as long as I have 
-                                been working with HTML5 of course. The two are 
-                                inexorably linked. Every page I build gets better 
-                                and better. I like to use CSS Flexbox, but I want 
-                                to build with CSS Grid more in my next project. 
-                                I think I lean on Flexbox more out of habit because 
-                                I am more familiar with it.
+                                Building cross-platform applications with a focus on clean state management and responsive UI/UX 
+                                (e.g., Task Dashboard project).
                             </p>
                         </div>
                     </div>
 
                     <div class="collapsible-card">
-                        <button class="collapsible" aria-label="expand javascript card for more details">JavaScript</button>
+                        <button class="collapsible" aria-label="expand Modern Web card for more details">Modern Web</button>
                         <div class="content">
                             <p>
-                                JavaScript was a new challenge for me when I first 
-                                started working with in in late 2022. The only 
-                                experience I had with anything similar before 
-                                then was I had tried to learn Visual Basic in 
-                                the 2000s. I gave that up because I had no idea 
-                                what I would want to use it for. After starting 
-                                JavaScript through Codecademy however, I quickly 
-                                knew what my first project with it would be; a 
-                                simple game. Playing games is one of my 
-                                favorite hobbies, so naturally Math.random() was 
-                                an inspiration for my largest project, the text 
-                                based simple role playing game I built in early 2023.
+                                Proficient in semantic HTML5, CSS Grid/Flexbox, and asynchronous JavaScript for dynamic user experiences.
                             </p>
                         </div>
                     </div>
 
                     <div class="collapsible-card">
-                        <button class="collapsible" aria-label="expand windows card for more details">Windows 10 and 11</button>
+                        <button class="collapsible" aria-label="expand Version Control card for more details">Version Control</button>
                         <div class="content">
                             <p>
-                                I grew up on Windows PCs. My father does database 
-                                work professinally and currently leads a team of 
-                                developers for a local Maine company. I've been tinkering 
-                                and playing games on Windows for my entire life. I've built 
-                                gaming PCs and I've spent my fair share of frustrated afternoons 
-                                troubleshooting BSODs and corrupt installations. I've even 
-                                spent some time fighting off malware, but luckily that has 
-                                not been an issue for me or my family for some time.
+                                Advanced Git/GitHub workflow, including branching strategies and collaborative repository management.
                             </p>
                         </div>
                     </div>
-
-                    <div class="collapsible-card">
-                        <button class="collapsible" aria-label="expand microsoft office card for more details">Microsoft Office</button>
-                        <div class="content">
-                            <p>
-                                Microsoft Office tools have been a part of my life for 
-                                as long as I've been working on PCs. Since elementary school
-                                computer class I've been typing away in Word. Excel is an 
-                                application I use daily at work now alongside Outlook. I 
-                                know my way around PowerPoint of course, but some of the other 
-                                tools I'm less familiar with.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="collapsible-card">
-                        <button class="collapsible" aria-label="expand command line card for more details">Command Line</button>
-                        <div class="content">
-                            <p>
-                                While I've used the Command Line Interface before starting 
-                                with Codecademy, I never knew much more than how to copy and 
-                                paste commands while troubleshooting something. Now I can 
-                                comfortably navigate my entire PC with the CLI and it feels more 
-                                natural in some aspects than using the GUI.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="collapsible-card">
-                        <button class="collapsible" aria-label="expand git card for more details">Git</button>
-                        <div class="content">
-                            <p>
-                                Man Git is cool. I always wondered how larger companies had 
-                                their big developer teams working on the same thing at the same time 
-                                and after learning Git and all makes so much more sense. Using 
-                                Git for version control or to branch out to work on a new feature without 
-                                breaking everything in the main branch just makes so much sense that I 
-                                felt a little dimwitted that I hadn't puzzled it out myself before 
-                                Codecademy taught it to me. I have used Git in combination with 
-                                GitHub since I learned how to use both tools and sometimes I wish 
-                                I could use them for my current job to make changes to an excel file... 
-                                Maybe once I have more experiance I could puzzle out something like that.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="collapsible-card">
-                        <button class="collapsible" aria-label="expand github card for more details">GitHub</button>
-                        <div class="content">
-                            <p>
-                                GitHub is just as awesome as Git. I had heard of it and even visited 
-                                and read some READMEs and used some tools from GitHub before I 
-                                learned how to make my own repositories and host my own projects there. 
-                                It is a fun thing to just browse (and usually more productive than reddit)
-                                and see the sort of things other people are working on.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="collapsible-card">
-                        <button class="collapsible" aria-label="expand responsive design card for more details">Responsive Design</button>
-                        <div class="content">
-                            <p>
-                                Responsive design is so important these days. I don't have the 
-                                numbers in front of me, but I'm willing to bet the vast majority of 
-                                people that visit any website or web application are going to do so 
-                                from a mobile device or tablet. Mobile devices are so much easier to 
-                                access that if you're deigning your website or application without 
-                                accounting for smaller screens you are going to miss out on almost the 
-                                entire market. I have a home PC that I built myself for gaming and for 
-                                working on learning to be a full stack developer, but I know I am in the 
-                                minority. Almost everyone that accesses the internet will do so way more from 
-                                the device in their pocket than from a home office or even a laptop.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="collapsible-card">
-                        <button class="collapsible" aria-label="expand accessible design card for more details">Accessible Design</button>
-                        <div class="content">
-                            <p>
-                                This is very important too if you hope to be able to market your 
-                                product to the entire population. I've been following the really cool 
-                                stuff that Xbox has been working on with their Xbox Adaptive Controller 
-                                to make gaming accessible to as many people as possible, and if I want 
-                                to build a quality, respectable product I need to do the same thing. I'm 
-                                still learning how to do this well, but it is something that I think is 
-                                highly important and I will be striving to make every project I work on 
-                                accessible to as many people as possible.
-                            </p>
-                        </div>
-                    </div>
-
             </div>
 
             <h2>Attributes</h2>

@@ -1,480 +1,156 @@
-/*
-colors:
-palette sourced from www.coolors.co
-this is a blue, maroon, and orange color theme
-
-#5C89C0 pale blue
-#557AAA sky blue
-#364863 blue gray
-#232735 dark blue gray
-#0F0606 dark maroon
-#270D06 maroon
-#6E2206 dark burnt orange
-#9E3006 burnt orange
-#CD3D06 orange
-#D24F1D pale orange
-
-fonts:
-fonts sourced from fonts.google.com
-headers: Oxanium
-paragraphs: Exo 2
-buttons: Orbitron
-
-stylesheet:
-all sections of the stylesheets are labelled with "||section name"
-the new sections are preceeded with three blank lines
-every rule will be laid out similar to the below example:
-
-selector {
-  margins
-  padding
-
-  font styling (size, boldness, text-decoration, list-style)
-  
-  element sizing (height, width)
-
-  display (flex, grid etc)
-  display rules
-  position
-  overflow
-
-  color
-  background-color
-
-  border
-  border-radius
-
-transition
-animation
-
-any other rules
+/* || Variables */
+:root {
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --accent: #38bdf8;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border: #334155;
+  --font-header: 'Oxanium', cursive;
+  --font-body: 'Exo 2', sans-serif;
+  --font-button: 'Orbitron', sans-serif; /* Added missing variable */
 }
-*/
 
-
-
-/* ||universal styles and resets */
-
+/* || Universal Resets */
 * {
   margin: 0;
-
+  padding: 0;
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oxanium', cursive;
-
-  color: #5C89C0;
-}
-
-p, a, figcaption, span, li{
-  font-family: 'Exo 2', sans-serif;
-  font-size: 16px;
-
-  color: #5C89C0;
-
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  font-family: 'Orbitron', sans-serif;
-
-  color: #5C89C0
-}
-
-
-
-/* ||header */
-
-header {
-  margin: 0 auto;
-  padding: 1.5rem;
-
-  width: 80%;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-
-  background-color: #0F0606;
-
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-}
-
-@media only screen and (max-width: 600px) {
-  header {
-    padding: 1.25rem;
-
-    width: 95%;
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  header {
-    padding: 1rem;
-
-    width: 97.5%;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  header {
-    padding: 0.75rem;
-
-    width: 98%;
-  }
-}
-
-header h1 {
-  color: #D24F1D;
-}
-
-header a {
-  padding: 0.5rem;
-
-  color:#D24F1D;
-  background-color: #0F0606;
-
-  border-bottom: 3px solid #D24F1D;
-  border-right: 3px solid #0F0606;
-
-  transition: background-color 0.2s, color 0.2s, border-bottom 0.2s, border-right 0.2s;
-}
-
-@media only screen and (max-width: 500px) {
-  header a {
-    padding: 0.25rem;
-
-    border-bottom: 2px solid #D24F1D;
-    border-right: 2px solid #0F0606;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  header a {
-    padding: 0.1rem;
-
-    border-bottom: 2px solid #D24F1D;
-    border-right: 2px solid #0F0606;
-  }
-}
-
-/*
-add hover and active effects to the link to 
-clearly indicate interactivity
-*/
-header a:hover {
-  color:#0F0606;
-  background-color: #D24F1D;
-
-  border-bottom: 3px solid #364863;
-  border-right: 3px solid #364863;
-}
-
-@media only screen and (max-width: 500px) {
-  header a:hover {
-    border-bottom: 2px solid #364863;
-    border-right: 2px solid #364863;
-  }
-}
-
-header a:active {
-  color:#D24F1D;
-  background-color: #364863;
-
-  border-bottom: 3px solid #D24F1D;
-  border-right: 3px solid #D24F1D;
-}
-
-@media only screen and (max-width: 500px) {
-  header a:active {
-    border-bottom: 2px solid #D24F1D;
-    border-right: 2px solid #D24F1D;
-  }
-}
-
-
-
-/* ||main body styling */
-
 body {
-  width: 100%;
-
-  background-color: #270D06;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
 }
 
-main {
-  margin: 0 auto;
-
-  width: 80%;
-}
-
-@media only screen and (max-width: 600px) {
-  main {
-    width: 95%;
-  } 
-}
-
-@media only screen and (max-width: 400px) {
-  main {
-    width: 98%;
-  }
-}
-
-
-
-/* ||work section */
-
-section#work {
-  margin: 5rem auto 0 auto;
-  padding: 1rem;
-
-  background-color: #232735;
-
-  border-radius: 1rem;
-}
-
-section#work h2 {
-  margin: 1rem 0;
-}
-
-section#work h4 {
-  margin: 1rem 0;
-}
-
-section#work a {
-  padding: 0.5rem;
-
-  background-color: #232735;
-
-  border-bottom: 3px solid #D24F1D;
-  border-right: 3px solid #232735;
-
-  transition: background-color 0.2s, color 0.2s, border-bottom 0.2s, border-right 0.2s;
-}
-
-  
-section#work a:hover {
-  color: #232735;
-  background-color: #D24F1D;
-
-  border-bottom: 3px solid #0F0606;
-  border-right: 3px solid #0F0606;
-}
-
-section#work a:active {
-  color: #D24F1D;
-  background-color: #232735;
-
-  border-bottom: 3px solid #0F0606;
-  border-right: 3px solid #0F0606;
-}
-
-
-
-/* ||skills and attributes section */
-
-section#skills {
-  margin: 5rem auto 0 auto;
-  padding: 1rem;
-
+/* || Header */
+header {
+  padding: 1.5rem 5%;
+  background: var(--bg-dark);
+  border-bottom: 1px solid var(--border);
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-evenly;
-
-  background-color: #232735;
-
-  border-radius: 1rem;
 }
 
+header h1 { 
+  color: var(--accent); 
+  font-family: var(--font-header);
+  font-size: 1.5rem;
+}
 
+header img#head-logo {
+    height: 3rem;
+}
+
+/* || Layout Sections */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.content-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--accent);
+}
+
+/* || Skill Card Grid */
 #skills-div, #attributes-div {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+    align-items: start;
 }
 
-/*
-these are the buttons that the user can 
-click on to open more details about each 
-skill or attribute. they have hover and 
-active styles to ensure the user knows 
-they are interactive elements
-*/
+/* || Collapsible Logic - THE FIX IS HERE */
+.collapsible-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-dark);
+}
+
 button.collapsible {
-  padding: 0.5rem;
-
-  width: 100%;
-
-  background-color: #232735;
-
-  border-top: none;
-  border-left: none;
-  border-bottom: 2px solid #D24F1D;
-  border-right: 2px solid #232735;
-
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s, border-bottom 0.2s, border-right 0.2s;
+    width: 100%;
+    padding: 1rem;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-card);
+    color: var(--accent);
+    border: none;
+    border-bottom: 2px solid var(--accent);
+    font-family: var(--font-button);
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.active, .collapsible:hover {
-  color: #D24F1D;
-  background-color: #0F0606;
-
-  border-right: 2px solid #D24F1D;
+button.collapsible:hover, .active {
+    background-color: #2d3e5a;
+    color: var(--text-main);
 }
-
-/* 
-the content of the collapsible elements 
-that is hidden by default with the 
-max-height: 0 rule so that before the button 
-is clicked, the content within the card is hidden
-the javascript executes on button press to adjust 
-max-height to fit the content
-*/
 
 .content {
-  padding: 0;
-
-  font-size: 0.8rem;
-
-  max-height: 0;
-
-  overflow: hidden;
-
-  color: #D24F1D;
-  background-color: #0F0606;
-
-  border-right: 2px solid #D24F1D;
-
-  transition: max-height 0.3s ease-out;
+    max-height: 0;         /* Hides content by default */
+    overflow: hidden;      /* Prevents text from spilling out */
+    transition: max-height 0.3s ease-out; /* Smooth slide animation */
+    background-color: var(--bg-dark);
 }
 
-/*
-this is the styling for the container 
-that holds the cards and their titles
-*/
-
-.collapsible-card {
-  margin: 1rem;
-  padding: 0.5rem;
-
-  max-width: 15rem;
-
-}
-
-
-
-/* ||contact section */
-
-section#contact {
-  margin: 5rem auto 0 auto;
-  padding: 1rem;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-
-  background-color: #0F0606;
-
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
-  
-#contact a {
-  padding: 0.5rem;
-
-  border-radius: 1rem;
-
-  transition: background-color 0.2s ease;
-}
-  
-a img {
-  transition: all 1s;
-}
-
-@media only screen and (max-width: 750px) {
-  a img {
-    height: 5rem;
-  } 
-}
-
-@media only screen and (max-width: 625px) {
-  a img {
-    height: 4rem;
-  }
-}
-
-@media only screen and (max-width: 525px) {
-  a img {
-    height: 3rem;
-  } 
-}
-
-/* ||footer section */
-
-footer {
-  margin: 0 auto;
+.content p {
   padding: 1.5rem;
-
-  width: 100%;
-  height: 15rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-
-  background-color: #0F0606;
-
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 
-@media only screen and (max-width: 400px) {
-  footer {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  } 
+/* || Work Experience Entries */
+.work-entry { margin-bottom: 2rem; }
+.work-entry h3 { color: var(--accent); font-size: 1.2rem; }
+.work-entry h4 { color: var(--text-main); font-style: italic; margin: 0.2rem 0; }
+.date { color: var(--accent); font-size: 0.85rem; font-weight: bold; opacity: 0.8; }
+ul { margin-top: 1rem; padding-left: 1.5rem; }
+li { color: var(--text-muted); margin-bottom: 0.5rem; }
+
+/* || Buttons */
+.btn-primary {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-family: var(--font-button);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--bg-dark) !important;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
-footer p {
-  padding: 0.3rem;
-
-  color: #D24F1D;
-
-  font-weight: 300;
-  line-height: 2;
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
 }
 
-footer a {
-  padding: 0.25rem;
-
-  font-weight: 300;
-  line-height: 2;
-
-  color: #D24F1D;
-  background-color: #0F0606;
-
-  border-bottom: 2px solid #D24F1D;
-  border-right: 3px solid #0F0606;
-
-  transition: color 0.2s, background-color 0.2s, border-bottom 0.2s, border-right 0.2s;
-}
-
-footer a:hover {
-  color:#0F0606;
-  background-color: #D24F1D;
-
-  border-bottom: 2px solid #364863;
-  border-right: 2px solid  #364863;
+/* || Footer */
+footer {
+    text-align: center;
+    padding: 4rem 2rem;
+    border-top: 1px solid var(--border);
+    margin-top: 4rem;
 }
