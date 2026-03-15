@@ -1,311 +1,114 @@
-/* ||colors, fonts, other style notes
-
-stylesheet:
-all sections of the stylesheets are labelled with "||section name"
-the new sections are preceeded with three blank lines
-every rule will be laid out similar to the below example:
-
-selector {
-  margins
-  padding
-
-  font styling (size, boldness, text-decoration, list-style)
-  
-  element sizing (height, width)
-
-  display (flex, grid etc)
-  display rules
-  position
-  overflow
-
-  color
-  background-color
-
-  border
-  border-radius
-
-  transition
-  animation
-
-  any other rules
-}
-*/
-
-
 :root {
-  /* new palette */
-  --bg-dark: #0f172a;       /* Deep Slate Blue */
-  --bg-card: #1e293b;       /* Lighter Slate */
-  --accent: #38bdf8;        /* Electric Blue */
-  --text-main: #f1f5f9;     /* Off-white */
-  --text-muted: #94a3b8;    /* Muted Blue-Gray */
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --accent: #38bdf8;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
   --border: #334155;
-  
-  /* fonts sourced from fonts.google.com */
   --font-header: 'Oxanium', cursive;
   --font-body: 'Exo 2', sans-serif;
   --font-button: 'Orbitron', sans-serif;
 }
 
-/* ||universal styles and resets */
-
-* {
-  margin: 0;
-
-  box-sizing: border-box;
-}
+/* || Universal Resets */
+* { margin: 0; box-sizing: border-box; }
 
 body {
-  width: 100%;
   background-color: var(--bg-dark);
   color: var(--text-main);
-  line-height: 1.6; /* adds breathing room to text */
+  font-family: var(--font-body);
+  line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+h1, h2, h3 { color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-family: var(--font-header); }
+
+p { color: var(--text-muted); font-weight: 300; }
+
+/* || Navigation & Header */
+header {
+    padding: 1.5rem 5%; /* Matches the resume header exactly */
+    background: var(--bg-dark);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Spans the full top bar */
 }
 
-p, a, figcaption, span, li {
- color: var(--text-muted);
-  font-weight: 300; /* Thinner weights look more modern */
-}
+header img { height: 3rem; }
+
+main { margin: 0 auto; width: 80%; padding: 2rem 0; }
 
 a {
-  text-decoration: none;
-}
-
-button {
-    font-family: var(--font-button);
-    color: var(--accent); /* Use the variable! */
-    background: transparent;
-    border: 1px solid var(--accent);
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
-
-
-
-/* ||header */
-
-header {
-    margin: 0 auto;
-    padding: 1.5rem;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--bg-dark);
-}
-
-/* ||body and main styling */
-
-body {
-    width: 100%;
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    line-height: 1.6;
-}
-
-main { 
-  margin: 0 auto;
-  padding: 0.5%;
-
-  width: 80%;
-}
-
-@media only screen and (max-width: 600px) {
-  main {
-    width: 95%;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  main {
-    width: 98%;
-  }
-}
-
-article h2, article a, article p {
-  margin: 0.5rem;
-}
-
-/* || New Layout Rules */
-
-.content-section {
-    padding: 4rem 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-/* About Section Flexbox */
-.profile-header {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    flex-wrap: wrap; /* Good for mobile! */
-}
-
-.profile-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-/* Project Grid - The Modern Way */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: var(--bg-card);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-}
-
-.project-tags {
-    margin: 1rem 0;
-}
-
-.project-tags span {
-    font-size: 0.8rem;
-    padding: 0.2rem 0.6rem;
-    background: var(--bg-dark);
-    border-radius: 4px;
-    margin-right: 0.5rem;
+    text-decoration: none;
     color: var(--accent);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2); /* Faint underline */
+    transition: all 0.3s ease;
 }
 
-/* Primary Button Style */
+a:hover {
+    border-bottom: 2px solid var(--accent); /* Thickens and brightens */
+    color: var(--text-main);
+}
+
+/* || Modern Link Style (The "Not Ugly" Link) */
+a:not(.btn-primary) {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 2px solid rgba(56, 189, 248, 0.2); /* Subtle underline */
+  transition: all 0.3s ease;
+}
+
+a:not(.btn-primary):hover {
+  border-bottom-color: var(--accent); /* Brightens on hover */
+  background: rgba(56, 189, 248, 0.05); /* Very slight background glow */
+}
+
+/* || The Standardized Button (Matching Resume Page) */
 .btn-primary {
-    display: inline-block;
+  display: inline-block;
     margin-top: 1rem;
     padding: 0.8rem 1.5rem;
     background: var(--accent);
     color: var(--bg-dark) !important;
+    font-family: var(--font-button);
     font-weight: bold;
     border-radius: 6px;
-    transition: opacity 0.3s;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-bottom: none; /* Removes the underline from buttons */
 }
 
 .btn-primary:hover {
-    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4); /* The "excellent shadow" */
+    opacity: 1; /* Remove opacity change for a cleaner look */
 }
 
-article a {
-    padding: 0.2rem 0; /* Simpler underline style */
-    color: var(--accent);
-    background-color: transparent;
-    border-bottom: 1px solid var(--accent);
-    transition: all 0.3s ease;
-}
+/* || Grid & Cards */
+.content-section { padding: 4rem 0; border-bottom: 1px solid var(--border); }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 
-article a:hover {
-    color: var(--text-main);
-    border-bottom-color: var(--text-main);
-}
-
-article a:active {
-  color: #D24F1D;
-  background-color: #0F0606;
-
-  border-bottom: 2px solid #232735;
-  border-right: 2px solid #232735;
-}
-
-/* 
-adjust the sizing of the images and screenshots 
-within the slides so that they are attractive, but 
-not overly large
-*/
-img#jesse-photo, img#portfolio-ss, img#game-ss, img#tom-krav-ss {
-  background-color: transparent; /* Remove the orange background */
+.project-card {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 12px;
   border: 1px solid var(--border);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-img#jesse-photo:hover {
-  transform: scale(1.02); /* Very subtle interactive pop */
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-
-/* ||contact cards section styling */
-
-section#contact {
-  margin: 5rem auto 5rem auto;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-#contact a {
-  padding: 0.5rem;
-
-  border-radius: 1rem;
-
-  transition: background-color 0.5s ease;
-}
-
-a img {
-  transition: all 1.5s;
-}
-
-@media only screen and (max-width: 600px) {
-  a img {
-    height: 5rem;
-  }
-  
-}
-
-@media only screen and (max-width: 480px) {
-  a img {
-    height: 4rem;
-  }
-  
-}
-
-/* ||foooter styling */
-
-footer {
-  background-color: #020617; /* Even darker than the body */
-  border-top: 1px solid var(--border);
-  height: auto; /* Let it breathe based on content */
-  padding: 4rem 1.5rem;
-}
-
-footer p {
-  color: var(--text-muted);
-  font-weight: normal;
-}
-
-footer a {
-    padding: 0.25rem;
-    font-weight: bold;
-    color: var(--accent);
-    background-color: transparent;
-    border-bottom: 2px solid var(--accent);
-    transition: color 0.2s, border-bottom 0.2s;
-}
-
-footer a:hover {
-    color: var(--text-main);
-    border-bottom: 2px solid var(--text-main);
+.project-tags span {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  background: var(--bg-dark);
+  color: var(--accent);
+  border-radius: 4px;
+  margin-right: 0.5rem;
 }
