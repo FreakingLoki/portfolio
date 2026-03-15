@@ -6,19 +6,20 @@ This project began in April of 2023 when I though tI wanted to get into web deve
 
 ## To Do
 ### Readability
-- [ ] Redesign entire site for a scroll-friendly layout
-- [ ] explore more professional fonts
-- [ ] Explore a more modern and professional color palette
+- [x] Redesigned entire site for a scroll-friendly layout
+- [x] Swapped to a more modern and attractive color palette
 
 ### Responsiveness and Accessibility
 - [ ] Add keyboard controls to all major interactive elements
 
 ### Site Content
-- [ ] Rewrite content to better align with my current pursuit of a CS degree and my formidable warehouse experience
-- [ ] Reveiw and update skills section, highlight important classwork
+- [x] Rewrote content to better align with my current pursuit of a CS degree and my formidable warehouse experience
+- [ ] Reveiw and update attributes section
 - [ ] Add a more recent, more professional self-portrait
+- [ ] Reveiw and update images to match the new color scheme and remove unused
 
 ## Possible Bonus Improvements
 - [ ] maybe add some small animation the the main h1 header on index.html on hover
 - [ ] make the JH logo interactive and when clicked open a navigation menu to all of my projects
 - [ ] add a downloadable PDF version of my resume? not sure if this is possible with GitHub Pages, further research is required first
+- [ ] add a nod to my FreakingLoki handle (which i use all over)
